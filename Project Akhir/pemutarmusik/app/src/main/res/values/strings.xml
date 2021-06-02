@@ -1,9 +1,3 @@
 <resources>
     <string name="app_name">pemutarmusik</string>
-    <string-array name="listmusic">
-        <item>Lagu A</item>
-        <item>Lagu B</item>
-        <item>Lagu C</item>
-        <item>Lagu D</item>
-    </string-array>
 </resources>

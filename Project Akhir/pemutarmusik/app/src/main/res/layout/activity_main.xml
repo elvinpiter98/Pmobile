@@ -1,62 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Title"
+        android:textSize="26sp"
+        android:textColor="#000"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cover"
+        android:layout_marginVertical="12dp"/>
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar"/>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:background="@color/colorPrimary"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5">
-
-            <co.mobiwise.library.InteractivePlayerView
-                android:id="@+id/ipv"
-                android:layout_width="230dp"
-                android:layout_height="230dp"
-                android:layout_centerInParent="true"
-                app:imageCover="@drawable/imagetest"
-                app:selectedAction1="@drawable/shuffle_selected"
-                app:selectedAction2="@drawable/like_selected"
-                app:selectedAction3="@drawable/replay_selected"
-                app:unselectedAction1="@drawable/shuffle_unselected"
-                app:unselectedAction2="@drawable/like_unselected"
-                app:unselectedAction3="@drawable/replay_unselected" />
-            <Button
-                android:id="@+id/btnPlay"
-                android:layout_alignParentBottom="true"
-                android:background="@color/color_trans"
-                android:textStyle="bold"
-                android:textColor="#FFF"
-                android:text="PLAY"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Daftar Musik"/>
-                <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/listMusic"
-                    android:entries="@array/listmusic">
-                </ListView>
-        </LinearLayout>
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_skip_previous"
+                android:background="@drawable/btn_bg"/>
+        <ImageButton
+                android:id="@+id/play_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_play"
+                android:background="@drawable/btn_bg"/>
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_skip_next"
+                android:background="@drawable/btn_bg"/>
     </LinearLayout>
 
-</RelativeLayout>
+</>
