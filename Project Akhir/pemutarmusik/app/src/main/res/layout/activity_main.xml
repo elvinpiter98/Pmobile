@@ -24,7 +24,8 @@
     <SeekBar
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar"/>
+        android:id="@+id/seekbar"
+        android:progress="50" />
 
     <LinearLayout
         android:layout_width="300dp"
@@ -48,5 +49,4 @@
                 android:src="@drawable/ic_skip_next"
                 android:background="@drawable/btn_bg"/>
     </LinearLayout>
-
-</>
+</LinearLayout>

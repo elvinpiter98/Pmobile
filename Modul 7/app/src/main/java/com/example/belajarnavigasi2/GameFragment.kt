@@ -6,16 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.belajarnavigasi2.databinding.FragmentGameBinding
 
-class GameFragment: Fragment() {
+class GameFragment : Fragment() {
     override fun onCreateView(inflater:
                               LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
             inflater, R.layout.fragment_game, container, false)
         binding.submitButton.setOnClickListener { view: View ->
-            val checkedId = binding.questionRadioGroup.checkedRadioButtonId
+            val checkedId =
+                binding.questionRadioGroup.checkedRadioButtonId
             if (-1 != checkedId) {
                 var answerIndex = 0
                 when (checkedId) {
@@ -25,7 +27,7 @@ class GameFragment: Fragment() {
                     R.id.fourthAnswerRadioButton -> answerIndex = 3
                 }
                 if (answerIndex == 1) {
-                    view.finNavController()
+                    view.findNavController()
                         .navigate(R.id.action_gameFragment_to_gameWonFragment)
                 } else {
                     view.findNavController()
